@@ -1,0 +1,13 @@
+C:\Users\Greg\Downloads\ownvpnclient\bin\Release\VPNClient.exe.config
+C:\Users\Greg\Downloads\ownvpnclient\bin\Release\VPNClient.exe
+C:\Users\Greg\Downloads\ownvpnclient\bin\Release\VPNClient.pdb
+C:\Users\Greg\Downloads\ownvpnclient\bin\Release\DotRas.dll
+C:\Users\Greg\Downloads\ownvpnclient\bin\Release\DotRas.xml
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.csprojAssemblyReference.cache
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.Form1.resources
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.Properties.Resources.resources
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.csproj.GenerateResource.cache
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.csproj.CoreCompileInputs.cache
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.csproj.CopyComplete
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.exe
+C:\Users\Greg\Downloads\ownvpnclient\obj\Release\VPNClient.pdb

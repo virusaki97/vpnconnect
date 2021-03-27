@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{343FCA90-FC87-4D08-93ED-0D6B1C05AFD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VPNClient</RootNamespace>
+    <AssemblyName>VPNClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Properties\AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotRas, Version=1.3.5166.33435, Culture=neutral, PublicKeyToken=b378f04384b7892a, processorArchitecture=MSIL">
+      <HintPath>packages\DotRas.for.Win8.1.3.0\lib\net40\DotRas.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlagCountryItem.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VPNConnection.cs" />
+    <Compile Include="VPNServer.cs" />
+    <Compile Include="VPNSettings.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VPNData\default_list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CountryFlags\ad.png" />
+    <EmbeddedResource Include="CountryFlags\ae.png" />
+    <EmbeddedResource Include="CountryFlags\af.png" />
+    <EmbeddedResource Include="CountryFlags\ag.png" />
+    <EmbeddedResource Include="CountryFlags\ai.png" />
+    <EmbeddedResource Include="CountryFlags\al.png" />
+    <EmbeddedResource Include="CountryFlags\am.png" />
+    <EmbeddedResource Include="CountryFlags\an.png" />
+    <EmbeddedResource Include="CountryFlags\ao.png" />
+    <EmbeddedResource Include="CountryFlags\ar.png" />
+    <EmbeddedResource Include="CountryFlags\as.png" />
+    <EmbeddedResource Include="CountryFlags\at.png" />
+    <EmbeddedResource Include="CountryFlags\au.png" />
+    <EmbeddedResource Include="CountryFlags\aw.png" />
+    <EmbeddedResource Include="CountryFlags\ax.png" />
+    <EmbeddedResource Include="CountryFlags\az.png" />
+    <EmbeddedResource Include="CountryFlags\ba.png" />
+    <EmbeddedResource Include="CountryFlags\bb.png" />
+    <EmbeddedResource Include="CountryFlags\bd.png" />
+    <EmbeddedResource Include="CountryFlags\be.png" />
+    <EmbeddedResource Include="CountryFlags\bf.png" />
+    <EmbeddedResource Include="CountryFlags\bg.png" />
+    <EmbeddedResource Include="CountryFlags\bh.png" />
+    <EmbeddedResource Include="CountryFlags\bi.png" />
+    <EmbeddedResource Include="CountryFlags\bj.png" />
+    <EmbeddedResource Include="CountryFlags\bm.png" />
+    <EmbeddedResource Include="CountryFlags\bn.png" />
+    <EmbeddedResource Include="CountryFlags\bo.png" />
+    <EmbeddedResource Include="CountryFlags\br.png" />
+    <EmbeddedResource Include="CountryFlags\bs.png" />
+    <EmbeddedResource Include="CountryFlags\bt.png" />
+    <EmbeddedResource Include="CountryFlags\bv.png" />
+    <EmbeddedResource Include="CountryFlags\bw.png" />
+    <EmbeddedResource Include="CountryFlags\by.png" />
+    <EmbeddedResource Include="CountryFlags\bz.png" />
+    <EmbeddedResource Include="CountryFlags\ca.png" />
+    <EmbeddedResource Include="CountryFlags\catalonia.png" />
+    <EmbeddedResource Include="CountryFlags\cc.png" />
+    <EmbeddedResource Include="CountryFlags\cd.png" />
+    <EmbeddedResource Include="CountryFlags\cf.png" />
+    <EmbeddedResource Include="CountryFlags\cg.png" />
+    <EmbeddedResource Include="CountryFlags\ch.png" />
+    <EmbeddedResource Include="CountryFlags\ci.png" />
+    <EmbeddedResource Include="CountryFlags\ck.png" />
+    <EmbeddedResource Include="CountryFlags\cl.png" />
+    <EmbeddedResource Include="CountryFlags\cm.png" />
+    <EmbeddedResource Include="CountryFlags\cn.png" />
+    <EmbeddedResource Include="CountryFlags\co.png" />
+    <EmbeddedResource Include="CountryFlags\cr.png" />
+    <EmbeddedResource Include="CountryFlags\cs.png" />
+    <EmbeddedResource Include="CountryFlags\cu.png" />
+    <EmbeddedResource Include="CountryFlags\cv.png" />
+    <EmbeddedResource Include="CountryFlags\cw.png" />
+    <EmbeddedResource Include="CountryFlags\cx.png" />
+    <EmbeddedResource Include="CountryFlags\cy.png" />
+    <EmbeddedResource Include="CountryFlags\cz.png" />
+    <EmbeddedResource Include="CountryFlags\de.png" />
+    <EmbeddedResource Include="CountryFlags\dj.png" />
+    <EmbeddedResource Include="CountryFlags\dk.png" />
+    <EmbeddedResource Include="CountryFlags\dm.png" />
+    <EmbeddedResource Include="CountryFlags\do.png" />
+    <EmbeddedResource Include="CountryFlags\dz.png" />
+    <EmbeddedResource Include="CountryFlags\ec.png" />
+    <EmbeddedResource Include="CountryFlags\ee.png" />
+    <EmbeddedResource Include="CountryFlags\eg.png" />
+    <EmbeddedResource Include="CountryFlags\eh.png" />
+    <EmbeddedResource Include="CountryFlags\en.png" />
+    <EmbeddedResource Include="CountryFlags\er.png" />
+    <EmbeddedResource Include="CountryFlags\es.png" />
+    <EmbeddedResource Include="CountryFlags\et.png" />
+    <EmbeddedResource Include="CountryFlags\eu.png" />
+    <EmbeddedResource Include="CountryFlags\fi.png" />
+    <EmbeddedResource Include="CountryFlags\fj.png" />
+    <EmbeddedResource Include="CountryFlags\fk.png" />
+    <EmbeddedResource Include="CountryFlags\fm.png" />
+    <EmbeddedResource Include="CountryFlags\fo.png" />
+    <EmbeddedResource Include="CountryFlags\fr.png" />
+    <EmbeddedResource Include="CountryFlags\ga.png" />
+    <EmbeddedResource Include="CountryFlags\gb.png" />
+    <EmbeddedResource Include="CountryFlags\gd.png" />
+    <EmbeddedResource Include="CountryFlags\ge.png" />
+    <EmbeddedResource Include="CountryFlags\gf.png" />
+    <EmbeddedResource Include="CountryFlags\gg.png" />
+    <EmbeddedResource Include="CountryFlags\gh.png" />
+    <EmbeddedResource Include="CountryFlags\gi.png" />
+    <EmbeddedResource Include="CountryFlags\gl.png" />
+    <EmbeddedResource Include="CountryFlags\gm.png" />
+    <EmbeddedResource Include="CountryFlags\gn.png" />
+    <EmbeddedResource Include="CountryFlags\gp.png" />
+    <EmbeddedResource Include="CountryFlags\gq.png" />
+    <EmbeddedResource Include="CountryFlags\gr.png" />
+    <EmbeddedResource Include="CountryFlags\gs.png" />
+    <EmbeddedResource Include="CountryFlags\gt.png" />
+    <EmbeddedResource Include="CountryFlags\gu.png" />
+    <EmbeddedResource Include="CountryFlags\gw.png" />
+    <EmbeddedResource Include="CountryFlags\gy.png" />
+    <EmbeddedResource Include="CountryFlags\hk.png" />
+    <EmbeddedResource Include="CountryFlags\hm.png" />
+    <EmbeddedResource Include="CountryFlags\hn.png" />
+    <EmbeddedResource Include="CountryFlags\hr.png" />
+    <EmbeddedResource Include="CountryFlags\ht.png" />
+    <EmbeddedResource Include="CountryFlags\hu.png" />
+    <EmbeddedResource Include="CountryFlags\id.png" />
+    <EmbeddedResource Include="CountryFlags\ie.png" />
+    <EmbeddedResource Include="CountryFlags\il.png" />
+    <EmbeddedResource Include="CountryFlags\in.png" />
+    <EmbeddedResource Include="CountryFlags\io.png" />
+    <EmbeddedResource Include="CountryFlags\iq.png" />
+    <EmbeddedResource Include="CountryFlags\ir.png" />
+    <EmbeddedResource Include="CountryFlags\is.png" />
+    <EmbeddedResource Include="CountryFlags\it.png" />
+    <EmbeddedResource Include="CountryFlags\jm.png" />
+    <EmbeddedResource Include="CountryFlags\jo.png" />
+    <EmbeddedResource Include="CountryFlags\jp.png" />
+    <EmbeddedResource Include="CountryFlags\ke.png" />
+    <EmbeddedResource Include="CountryFlags\kg.png" />
+    <EmbeddedResource Include="CountryFlags\kh.png" />
+    <EmbeddedResource Include="CountryFlags\ki.png" />
+    <EmbeddedResource Include="CountryFlags\km.png" />
+    <EmbeddedResource Include="CountryFlags\kn.png" />
+    <EmbeddedResource Include="CountryFlags\kp.png" />
+    <EmbeddedResource Include="CountryFlags\kr.png" />
+    <EmbeddedResource Include="CountryFlags\kw.png" />
+    <EmbeddedResource Include="CountryFlags\ky.png" />
+    <EmbeddedResource Include="CountryFlags\kz.png" />
+    <EmbeddedResource Include="CountryFlags\la.png" />
+    <EmbeddedResource Include="CountryFlags\lb.png" />
+    <EmbeddedResource Include="CountryFlags\lc.png" />
+    <EmbeddedResource Include="CountryFlags\li.png" />
+    <EmbeddedResource Include="CountryFlags\lk.png" />
+    <EmbeddedResource Include="CountryFlags\lr.png" />
+    <EmbeddedResource Include="CountryFlags\ls.png" />
+    <EmbeddedResource Include="CountryFlags\lt.png" />
+    <EmbeddedResource Include="CountryFlags\lu.png" />
+    <EmbeddedResource Include="CountryFlags\lv.png" />
+    <EmbeddedResource Include="CountryFlags\ly.png" />
+    <EmbeddedResource Include="CountryFlags\ma.png" />
+    <EmbeddedResource Include="CountryFlags\mc.png" />
+    <EmbeddedResource Include="CountryFlags\md.png" />
+    <EmbeddedResource Include="CountryFlags\me.png" />
+    <EmbeddedResource Include="CountryFlags\mg.png" />
+    <EmbeddedResource Include="CountryFlags\mh.png" />
+    <EmbeddedResource Include="CountryFlags\mk.png" />
+    <EmbeddedResource Include="CountryFlags\ml.png" />
+    <EmbeddedResource Include="CountryFlags\mm.png" />
+    <EmbeddedResource Include="CountryFlags\mn.png" />
+    <EmbeddedResource Include="CountryFlags\mo.png" />
+    <EmbeddedResource Include="CountryFlags\mp.png" />
+    <EmbeddedResource Include="CountryFlags\mq.png" />
+    <EmbeddedResource Include="CountryFlags\mr.png" />
+    <EmbeddedResource Include="CountryFlags\ms.png" />
+    <EmbeddedResource Include="CountryFlags\mt.png" />
+    <EmbeddedResource Include="CountryFlags\mu.png" />
+    <EmbeddedResource Include="CountryFlags\mv.png" />
+    <EmbeddedResource Include="CountryFlags\mw.png" />
+    <EmbeddedResource Include="CountryFlags\mx.png" />
+    <EmbeddedResource Include="CountryFlags\my.png" />
+    <EmbeddedResource Include="CountryFlags\mz.png" />
+    <EmbeddedResource Include="CountryFlags\na.png" />
+    <EmbeddedResource Include="CountryFlags\nc.png" />
+    <EmbeddedResource Include="CountryFlags\ne.png" />
+    <EmbeddedResource Include="CountryFlags\nf.png" />
+    <EmbeddedResource Include="CountryFlags\ng.png" />
+    <EmbeddedResource Include="CountryFlags\ni.png" />
+    <EmbeddedResource Include="CountryFlags\nl.png" />
+    <EmbeddedResource Include="CountryFlags\no.png" />
+    <EmbeddedResource Include="CountryFlags\np.png" />
+    <EmbeddedResource Include="CountryFlags\nr.png" />
+    <EmbeddedResource Include="CountryFlags\nu.png" />
+    <EmbeddedResource Include="CountryFlags\nz.png" />
+    <EmbeddedResource Include="CountryFlags\om.png" />
+    <EmbeddedResource Include="CountryFlags\pa.png" />
+    <EmbeddedResource Include="CountryFlags\pe.png" />
+    <EmbeddedResource Include="CountryFlags\pf.png" />
+    <EmbeddedResource Include="CountryFlags\pg.png" />
+    <EmbeddedResource Include="CountryFlags\ph.png" />
+    <EmbeddedResource Include="CountryFlags\pk.png" />
+    <EmbeddedResource Include="CountryFlags\pl.png" />
+    <EmbeddedResource Include="CountryFlags\pm.png" />
+    <EmbeddedResource Include="CountryFlags\pn.png" />
+    <EmbeddedResource Include="CountryFlags\pr.png" />
+    <EmbeddedResource Include="CountryFlags\ps.png" />
+    <EmbeddedResource Include="CountryFlags\pt.png" />
+    <EmbeddedResource Include="CountryFlags\pw.png" />
+    <EmbeddedResource Include="CountryFlags\py.png" />
+    <EmbeddedResource Include="CountryFlags\qa.png" />
+    <EmbeddedResource Include="CountryFlags\re.png" />
+    <EmbeddedResource Include="CountryFlags\ro.png" />
+    <EmbeddedResource Include="CountryFlags\rs.png" />
+    <EmbeddedResource Include="CountryFlags\ru.png" />
+    <EmbeddedResource Include="CountryFlags\rw.png" />
+    <EmbeddedResource Include="CountryFlags\sa.png" />
+    <EmbeddedResource Include="CountryFlags\sb.png" />
+    <EmbeddedResource Include="CountryFlags\sc.png" />
+    <EmbeddedResource Include="CountryFlags\scotland.png" />
+    <EmbeddedResource Include="CountryFlags\sd.png" />
+    <EmbeddedResource Include="CountryFlags\se.png" />
+    <EmbeddedResource Include="CountryFlags\sg.png" />
+    <EmbeddedResource Include="CountryFlags\sh.png" />
+    <EmbeddedResource Include="CountryFlags\si.png" />
+    <EmbeddedResource Include="CountryFlags\sj.png" />
+    <EmbeddedResource Include="CountryFlags\sk.png" />
+    <EmbeddedResource Include="CountryFlags\sl.png" />
+    <EmbeddedResource Include="CountryFlags\sm.png" />
+    <EmbeddedResource Include="CountryFlags\sn.png" />
+    <EmbeddedResource Include="CountryFlags\so.png" />
+    <EmbeddedResource Include="CountryFlags\sr.png" />
+    <EmbeddedResource Include="CountryFlags\st.png" />
+    <EmbeddedResource Include="CountryFlags\sv.png" />
+    <EmbeddedResource Include="CountryFlags\sy.png" />
+    <EmbeddedResource Include="CountryFlags\sz.png" />
+    <EmbeddedResource Include="CountryFlags\tc.png" />
+    <EmbeddedResource Include="CountryFlags\td.png" />
+    <EmbeddedResource Include="CountryFlags\tf.png" />
+    <EmbeddedResource Include="CountryFlags\tg.png" />
+    <EmbeddedResource Include="CountryFlags\th.png" />
+    <EmbeddedResource Include="CountryFlags\tj.png" />
+    <EmbeddedResource Include="CountryFlags\tk.png" />
+    <EmbeddedResource Include="CountryFlags\tl.png" />
+    <EmbeddedResource Include="CountryFlags\tm.png" />
+    <EmbeddedResource Include="CountryFlags\tn.png" />
+    <EmbeddedResource Include="CountryFlags\to.png" />
+    <EmbeddedResource Include="CountryFlags\tr.png" />
+    <EmbeddedResource Include="CountryFlags\tt.png" />
+    <EmbeddedResource Include="CountryFlags\tv.png" />
+    <EmbeddedResource Include="CountryFlags\tw.png" />
+    <EmbeddedResource Include="CountryFlags\tz.png" />
+    <EmbeddedResource Include="CountryFlags\ua.png" />
+    <EmbeddedResource Include="CountryFlags\ug.png" />
+    <EmbeddedResource Include="CountryFlags\um.png" />
+    <EmbeddedResource Include="CountryFlags\us.png" />
+    <EmbeddedResource Include="CountryFlags\uy.png" />
+    <EmbeddedResource Include="CountryFlags\uz.png" />
+    <EmbeddedResource Include="CountryFlags\va.png" />
+    <EmbeddedResource Include="CountryFlags\vc.png" />
+    <EmbeddedResource Include="CountryFlags\ve.png" />
+    <EmbeddedResource Include="CountryFlags\vg.png" />
+    <EmbeddedResource Include="CountryFlags\vi.png" />
+    <EmbeddedResource Include="CountryFlags\vn.png" />
+    <EmbeddedResource Include="CountryFlags\vu.png" />
+    <EmbeddedResource Include="CountryFlags\wales.png" />
+    <EmbeddedResource Include="CountryFlags\wf.png" />
+    <EmbeddedResource Include="CountryFlags\ws.png" />
+    <EmbeddedResource Include="CountryFlags\ye.png" />
+    <EmbeddedResource Include="CountryFlags\yt.png" />
+    <EmbeddedResource Include="CountryFlags\za.png" />
+    <EmbeddedResource Include="CountryFlags\zm.png" />
+    <EmbeddedResource Include="CountryFlags\zw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FormMediaResources\onbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FormMediaResources\offbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
